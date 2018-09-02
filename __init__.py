@@ -9,7 +9,7 @@ im1=load_image("marilyn.bmp")
 # k, l = input("Filter dim:").split()
 k, l= 19,19
 f = np.zeros((k, l))
-sigma = 2
+sigma = 8
 # count=0
 for i in range(0, k):
     for j in range(0, l):
