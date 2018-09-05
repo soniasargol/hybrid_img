@@ -45,7 +45,7 @@ def my_imfilter(image, filter1):
         # plt.show()
 
     else:
-        print("finter:reflect")
+        print("filter:reflect")
         padded_image=np.pad(image, (((k-1)//2,(k-1)//2),((l-1)//2,(l-1)//2),(0,0)), 'reflect')
         plt.imshow(padded_image)
         # plt.show()
@@ -123,13 +123,13 @@ def create_hybrid_image(image1, image2, filter1, filter2):
     low_frequencies=my_imfilter(image1, filter1)
     high_frequencies=(image2-my_imfilter(image2, filter2)+.5)/1.5
 
-    imgplot = plt.imshow(low_frequencies)
-    plt.show()
-    imgplot = plt.imshow(high_frequencies)
-    plt.show()
+    # imgplot = plt.imshow(low_frequencies)
+    # plt.show()
+    # imgplot = plt.imshow(high_frequencies)
+    # plt.show()
     hybrid_image = (high_frequencies+low_frequencies)/2
-    imgplot = plt.imshow(hybrid_image)
-    plt.show()
+    # imgplot = plt.imshow(hybrid_image)
+    # plt.show()
     # raise NotImplementedError('`create_hybrid_image` function in ' +
     # '`student_code.py` needs to be implemented')
 
